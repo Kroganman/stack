@@ -40,7 +40,7 @@ int pop()
 }
 int main ()
 {
-    int enter;
+    int enter, j;
     while(enter!=3)
     {
        printf("Enter '1' to put on the stack\nEnter '2' to delete the stack element\nEnter '3' to exit\n");
@@ -60,7 +60,7 @@ int main ()
         printf("Your stack:\n");
     else
         printf("Stack is empty!The work is completed!\n");
-    for (int j = i; j >= 0; j--)
+    for (j = i; j >= 0; j--)
 		{
 			printf("%d ", stack[j]);
 		}
