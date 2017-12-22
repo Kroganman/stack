@@ -6,7 +6,7 @@
 int stack[50];
 int i=-1;
 
-void push()
+void push() /* Adding an inserted element to the stack */
 {
     int elem;
     i++;
@@ -18,16 +18,16 @@ void push()
     }
     else
     {
-        printf("There is no place on the stack!\n");
+        printf("There is no place on the stack!\n"); /* Check for stack overflow */
     }
 }
 
-int pop()
+int pop() /* Deleting the desired item from the stack */
 {
     int elem;
     if(i==-1)
     {
-        printf("Stack is empty!\n");
+        printf("Stack is empty!\n"); /* Testing on an empty stack */
         return(i);
     }
     else
@@ -40,19 +40,19 @@ int pop()
 }
 int main ()
 {
-    int enter, j;
-    while(enter!=3)
+    int a, j;
+    while(a!=3) /* Managing the stack */
     {
        printf("Enter '1' to put on the stack\nEnter '2' to delete the stack element\nEnter '3' to exit\n");
-       scanf("%d",&enter);
-       if(enter==1)
+       scanf("%d",&a);
+       if(a==1) /* Checking the entered digit */
            push();
        else
        {
-           if(enter==2)
+           if(a==2)
               pop();
            else
-              if(enter!=3)
+              if(a!=3)
                  printf("Error!\n");
        }
     }
@@ -60,7 +60,7 @@ int main ()
         printf("Your stack:\n");
     else
         printf("Stack is empty!The work is completed!\n");
-    for (j = i; j >= 0; j--)
+    for (j = i; j >= 0; j--) /* The output of the stack before the program terminates */
 		{
 			printf("%d ", stack[j]);
 		}
